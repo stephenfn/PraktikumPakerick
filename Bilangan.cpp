@@ -1,5 +1,5 @@
 //Buat program menentukan bilangan genap atau ganjil
-//dibuat oleh erick, 7 Juli 2026
+//dibuat oleh stephen, 7 Juli 2026
 
 #include <iostream>
 using namespace std;
@@ -12,10 +12,10 @@ int main () {
     cin >> bil;
     if (bil >= 0) {
             if (bil % 2 == 1) {
-        cout << "Bilangan anda adalah bilangan ganjil";
+        cout << "Bilangan anda adalah bilangan ganjil positif";
         }  
             else {
-        cout << "Bilangan anda adalah bilangan genap";
+        cout << "Bilangan anda adalah bilangan genap positif";
         }
     }
     else {

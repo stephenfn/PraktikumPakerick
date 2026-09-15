@@ -20,8 +20,26 @@ int main() {
     cin >> J;
 
     h = (q + (13 * (m + 1)) / 5 + K + (K / 4) + (J / 4) + (5 * J)) % 7;
-
-    cout << "Hasil \n0 = Sabtu \n1 = Minggu \n2 = Senin \n3 = Selasa \n4 = Rabu \n5 = Kamis \n6 = Jumat"<< endl;
-    cout << "Hari Kalian Lahir Adalah : " << h;
+    switch (h){
+        case 0:
+            cout << "Hari lahir kamu adalah hari sabtu";
+            break;
+        case 1:
+            cout << "Hari lahir kamu adalah hari minggu";
+            break;
+        case 2:
+            cout << "Hari lahir kamu adalah hari senin";
+            break;
+        case 3:
+            cout << "Hari lahir kamu adalah hari selasa";
+            break;
+        case 4:
+            cout << "Hari lahir kamu adalah hari rabu";
+            break;
+        case 5:
+            cout << "Hari lahir kamu adalah hari kamis";
+        default :
+            cout << "Hari lahir kamu adalah hari jumat";
+    }
     return 0;
 }

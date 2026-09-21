@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
@@ -7,17 +6,28 @@ int main() {
     int h;
     int q;
     int m;
-    int K;
-    int J;
+    int K; // 2 digit terakhir tahun lahir
+    int J; // 2 digit awal tahun lahir
+    int year;
 
     cout << "Masukan Tanggal Lahir Anda (1-31) : ";
     cin >> q;
-    cout <<"Masukan Bulan Lahir Anda , Januari dan Februari adalah 13 dan 14 : ";
+    cout <<"Masukan Bulan Lahir Anda (1-12) : ";
     cin >> m;
-    cout <<"Masukan 2 Digit Terakhir Tahun Lahir Anda (2026 = 26), \nJika Januari Atau Februari dikurangi 1 tahunnya : ";
-    cin >> K;
-    cout <<"Masukan 2 Digit Pertama dari Tahun Lahir Anda (2026 = 20) : ";
-    cin >> J;
+    cout <<"Masukan Tahun Lahir Anda : "; //2026
+    cin >> year;
+
+    K = year % 100;
+    J = year / 100;
+
+    if (m==1){
+        m +=12;
+        K-=1;
+    }
+    if (m==2){
+        m +=12;
+        K-=1;
+    }
 
     h = (q + (13 * (m + 1)) / 5 + K + (K / 4) + (J / 4) + (5 * J)) % 7;
     switch (h){
